@@ -19,6 +19,8 @@ func echoHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	log.Printf("Received request: %s\n", string(body))
+
 	fmt.Fprintf(w, "Received: %s\n", string(body))
 }
 
